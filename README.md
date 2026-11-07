@@ -1,4 +1,4 @@
-# Fase 4 - Software FJ
+# Fase 4 - Cliente reserva de salas
 
 Proyecto de programación orientada a objetos para gestionar clientes,
 servicios y reservas. Los datos se guardan en listas en memoria.
