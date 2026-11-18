@@ -13,9 +13,9 @@ El archivo de log registra eventos y errores.
 | `servicio.py` | ReservaSala | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Lesdy** |
 | `servicio.py` | AlquilerEquipo | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Disponible — Integrante 3** |
 | `servicio.py` | AsesoriaEspecializada | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Disponible — Integrante 4** |
-| `reserva.py` | Reserva | `__init__()`<br>`confirmar()`<br>`cancelar()`<br>`procesar()`<br>`mostrar_reserva()` | **Disponible — Integrante 4** |
-| `excepciones.py` | Excepciones personalizadas | Definición de excepciones | **Disponible — Integrante 5** |
-| `logger_config.py` | Logger | `configurar_logger()`<br>`registrar_evento()`<br>`registrar_error()` | **Disponible — Integrante 5** |
+| `reserva.py` | Reserva | `__init__()`<br>`confirmar()`<br>`cancelar()`<br>`procesar()`<br>`mostrar_reserva()` | **Valentina** |
+| `excepciones.py` | Excepciones personalizadas | Definición de excepciones | **Paola** |
+| `logger_config.py` | Logger | `configurar_logger()`<br>`registrar_evento()`<br>`registrar_error()` | **Paola** |
 
 Cada integrante trabajará en su propia rama y realizará sus commits desde su cuenta.
 Los cambios se revisarán y probarán antes de integrarlos a `main`.
