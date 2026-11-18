@@ -3,8 +3,7 @@
 from abc import ABC, abstractmethod  # Permite definir una clase abstracta.
 
 
-class ClienteInvalidoError(ValueError):  # Representa errores en los datos del cliente.
-    pass  # Utiliza el comportamiento de ValueError con un nombre propio.
+from excepciones import ClienteInvalidoError  # Comparte la excepción con main.py.
 
 
 class Entidad(ABC):  # Es la base abstracta que representa una entidad del sistema.
@@ -70,9 +69,8 @@ class Cliente(Entidad):  # Hereda de Entidad y representa a una persona registra
         return f"Cliente {self.get_documento()}: {self.get_nombre()}"  # Devuelve una descripción.
 
     def mostrar_datos(self):  # Prepara los datos para mostrarlos desde el programa principal.
-        datos = self.describir()  # Obtiene el documento y el nombre.
-        datos = datos + f" | Correo: {self.get_correo()}"  # Agrega el correo al texto.
-        return datos  # Devuelve el texto para que quien llama decida dónde mostrarlo.
+        # Reutiliza la descripción y agrega el correo para mostrar la ficha completa.
+        return f"{self.describir()} | Correo: {self.get_correo()}"
 
 
 def registrar_cliente(clientes, nombre, documento, correo):  # Recibe la lista y los datos del cliente.
