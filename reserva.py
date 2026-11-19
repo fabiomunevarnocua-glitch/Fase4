@@ -63,10 +63,6 @@ class Reserva:
         if self.__estado == "cancelada":
             raise ReservaInvalidaError("La reserva ya se encuentra cancelada.")
 
-        if self.__estado == "procesada":
-            raise ReservaInvalidaError(
-                "no se puede cancelar una reserva procesada."
-            )
         self.__estado= "cancelada"
 
         registrar_evento(
@@ -81,7 +77,7 @@ class Reserva:
                 raise ReservaInvalidaError(
                     "solamente se pueden procesar reservas confirmadas."
                 )
-           if not self.servicio.esta_disponible():
+            if not self.servicio.esta_disponible():
                 raise ReservaInvalidaError(
                     "el servicio ya no se encuentra disponible."
                 )
@@ -121,14 +117,14 @@ class Reserva:
     def mostrar_reserva(self):
         texto = self.cliente.mostrar_datos()
         texto += "\nServicio: " +self.servicio.describir()
-        texto += f"\nDuración: {self.duracion}horas"
+        texto += f"\nDuración: {self.duracion} horas"
         texto += f"\nEstado: {self.__estado}"
 
         if self.__costo is None:
             texto += "\nCosto: Aún no calculado"
         else:
             texto += f"\nCosto: ${self.__costo}"
-       return texto
+        return texto
 #en el codigo se utilizo encapsulamiennto en los atributos estado y costo
 #ya que son datos que se protegen para evitar que queden fuera de la clase 
 #para consulta de valores se utilizan los metodos get estado y get costo
