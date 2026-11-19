@@ -113,6 +113,8 @@ class Reserva:
                 f"costo {costo}."
             )
 
+            return costo
+
         finally:
             registrar_evento("Finalizó el intento de procesar la reserva")
 
