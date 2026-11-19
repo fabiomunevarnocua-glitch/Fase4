@@ -11,9 +11,9 @@ El archivo de log registra eventos y errores.
 | `cliente.py` | Cliente | `__init__()`<br>`get_nombre()`<br>`set_nombre()`<br>`get_documento()`<br>`set_documento()`<br>`get_correo()`<br>`set_correo()`<br>`validar_nombre()`<br>`validar_documento()`<br>`validar_correo()`<br>`mostrar_datos()` | **Fabio** |
 | `servicio.py` | Servicio (abstracta) | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Lesdy** |
 | `servicio.py` | ReservaSala | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Lesdy** |
-| `servicio.py` | AlquilerEquipo | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Valentina Torres Gale** |
+| `servicio.py` | AlquilerEquipo | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Disponible — Integrante 3** |
 | `servicio.py` | AsesoriaEspecializada | `__init__()`<br>`calcular_costo()`<br>`describir()`<br>`validar_parametros()` | **Disponible — Integrante 4** |
-| `reserva.py` | Reserva | `__init__()`<br>`confirmar()`<br>`cancelar()`<br>`procesar()`<br>`mostrar_reserva()` | **Disponible — Integrante 3*** |
+| `reserva.py` | Reserva | `__init__()`<br>`confirmar()`<br>`cancelar()`<br>`procesar()`<br>`mostrar_reserva()` | **Valentina Torres Gale** |
 | `excepciones.py` | Excepciones personalizadas | Definición de excepciones | **Paola** |
 | `logger_config.py` | Logger | `configurar_logger()`<br>`registrar_evento()`<br>`registrar_error()` | **Paola** |
 
