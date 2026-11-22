@@ -199,6 +199,7 @@ Selecciona una opción: """).strip()
 
             # Opción 2: crear una reserva y calcular su costo.
             elif opcion == "2":
+                # Antes de crear una reserva, se verifica que exista un cliente registrado.
                 if not clientes:
                     raise ReservaInvalidaError("Primero registra un cliente con la opción 1.")
 
@@ -231,6 +232,7 @@ Selecciona una opción: """).strip()
 
             # Opción 4: cancelar una reserva existente.
             elif opcion == "4":
+                # Comprueba que existan reservas antes de permitir su cancelación.
                 if not reservas:
                     raise ReservaInvalidaError("Todavía no hay reservas para cancelar.")
 
@@ -241,6 +243,7 @@ Selecciona una opción: """).strip()
 
             # Opción 5: ejecutar las pruebas automáticas del programa.
             elif opcion == "5":
+                # Inicia la demostración automática de las funcionalidades del sistema.
                 ejecutar_demostracion()
 
             # Opción 0: finalizar el programa.
@@ -250,6 +253,7 @@ Selecciona una opción: """).strip()
 
             # Se controlan las opciones que no están disponibles en el menú.
             else:
+                # Evita que se ingresen opciones que no están disponibles en el menú.
                 raise ValueError("Selecciona una opción del 0 al 5.")
 
         except ValueError as error:
@@ -269,3 +273,4 @@ if __name__ == "__main__":
     except OSError as error:
         # Se informa si ocurre un problema al acceder al archivo de registro.
         print(f"No se pudo acceder al archivo de log: {error}")
+
