@@ -1,0 +1,44 @@
+
+class AlquilerEquipo(Servicio):
+    """
+    Clase que permite gestionar el alquiler de equipos.
+    Hereda los atributos y métodos de la clase Servicio.
+    """
+
+    def __init__(self, nombre, tarifa_hora, unidades):
+        # Inicializamos los datos generales del servicio
+        super().__init__(nombre, tarifa_hora)
+
+        # Validamos que la cantidad de equipos sea un entero positivo
+        if type(unidades) is not int or unidades <= 0:
+            raise ServicioInvalidoError(
+                "Las unidades deben ser un entero positivo."
+            )
+
+        # Guardamos la cantidad de equipos
+        self.__unidades = unidades
+
+    def describir(self):
+        # Retornamos una descripción del equipo alquilado
+        return (
+            f"Equipo {self.get_nombre()} "
+            f"({self.__unidades} unidades)"
+        )
+
+    def validar_parametros(self, duracion):
+        # Verificamos que la duración del alquiler sea válida
+        self._validar_duracion(duracion)
+
+    def calcular_costo(self, duracion, impuesto=0, descuento=0):
+        # Validamos las horas solicitadas
+        self.validar_parametros(duracion)
+
+        # Calculamos el costo según la tarifa, las horas y las unidades
+        costo = self._calcular_costo_base(
+            duracion,
+            impuesto,
+            descuento,
+            self.__unidades
+        )
+
+        return costo
